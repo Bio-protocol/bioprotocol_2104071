@@ -1,5 +1,23 @@
-Metagenomic Protocol (From Quality Control to Mapping) for Metagenome-assembled Genomes (MAGs) using Anvi’oA. Input dataCommandanvi-run-workflow --list-workflowsAvailable workflows ....: contigs, metagenomics, pangenomics, phylogenomics, trnaseqanvi-run-workflow -w WORKFLOW-NAME \                  --get-default-config OUTPUT-FILE-NAMEC. Workflowanvi-run-workflow -w metagenomics \                  -c config-megahit.json \                  --save-workflow-graph
+Metagenomic Protocol (From Quality Control to Mapping) for Metagenome-assembled Genomes (MAGs) using Anvi√ïo
+
+A. Input data
+Command
+anvi-run-workflow --list-workflows
+Available workflows ....: contigs, metagenomics, pangenomics, phylogenomics, trnaseq
+
+anvi-run-workflow -w WORKFLOW-NAME \
+                  --get-default-config OUTPUT-FILE-NAME
+
+C. Workflow
+
+anvi-run-workflow -w metagenomics \
+                  -c config-megahit.json \
+                  --save-workflow-graph
 
 anvi-run-workflow -w metagenomics \
                   -c config-megahit.json
-
+
+
+
+
+
