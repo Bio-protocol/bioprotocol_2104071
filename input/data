@@ -1,0 +1,20 @@
+
+Input data
+
+Command
+anvi-run-workflow --list-workflows
+Available workflows ....: contigs, metagenomics, pangenomics, phylogenomics, trnaseq
+
+After you have decided the process you wish to use, the config file allows you to change the parameters and order of steps associated with that process. Even if you are satisfied with all the default parameters, the config file is required for all workflows.
+
+Command
+anvi-run-workflow -w WORKFLOW-NAME \
+                  --get-default-config OUTPUT-FILE-NAME
+
+The --get-default-config will generate a default config file for a workflow that you can modify. Configurable flags and parameters will be contained in this file. You can either leave any parameters that you do not intend to change ‘as is,' or remove those that you do not want to change from your config file to make it shorter and cleaner.
+
+There are three configurations in the config file:
+
+1.	General workflow parameters: You will need a name for your project and the workflow mode you want to employ.
+2.	Parameters: Parameters that are exclusively applicable to a single rule, such as the anvi'o profiling step's minimum contig length. 
+3.	Names of the output directory: This is about how anvi’o will deal with output directories and files.
