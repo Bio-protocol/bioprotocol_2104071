@@ -1,0 +1,10 @@
+Source: Anvi’o v7 (https://merenlab.org/software/anvio/)
+
+Anvi’o workflows help the users to:
+1.	Streamlining standard repetitive steps of ‘omics data analysis like assembly, mapping, mapping results profiling, annotation of functions/taxonomy, generating anvi’o databases in a scalable form.
+2.	Ask biological questions about the data.
+3.	To describe the data and the results easily to the scientific community.
+
+Anvi’o depends on snakemake and makes the workflows specific using config files.
+
+Anvi’o use the program anvi-run-workflow to run the workflows. For a particular workflow, the program will the users to prepare the config file.
