@@ -9,3 +9,22 @@ Anvi’o workflows help the users to:
 Anvi’o depends on snakemake and makes the workflows specific using config files.
 
 Anvi’o use the program anvi-run-workflow to run the workflows. For a particular workflow, the program will the users to prepare the config file.
+
+Command
+anvi-run-workflow --list-workflows
+Available workflows ....: contigs, metagenomics, pangenomics, phylogenomics, trnaseq
+
+After you have decided the process, you wish to use, the config file allows you to change the parameters and order of steps associated with that process. Even if you are satisfied with all the default parameters, the config file is required for all workflows. The users should ensure that the config files are proper and preparing a config file for a particular workflow could be challenging. 
+
+Command
+anvi-run-workflow -w WORKFLOW-NAME \
+                  --get-default-config OUTPUT-FILE-NAME
+
+The --get-default-config will generate a default config file for a workflow that you can modify. Configurable flags and parameters will be contained in this file. You can either leave any parameters that you do not intend to change ‘as is,' or remove those that you do not want to change from your config file to make it shorter and cleaner.
+
+There are three configurations in the config file:
+
+1.	General workflow parameters: You will need a name for your project and the workflow mode you want to employ.
+2.	Parameters: Parameters that are exclusively applicable to a single rule, such as the anvi'o profiling step's minimum contig length. Each program has unique parameters. The users should ensure to use parameters that appear in the config file that would be identical to the names used in the particular program. For instance, if there are multiple ways to use adjustable parameters or arguments – the users should use the longer one. Let’s take an example – anvi-run-hmms are able to accept with -H or --hmm-profile-dir parameters that specify the directory path of HMM profile. However, the users are only allowed to use --hmm-profile-dir in the config file.
+
+3.	Names of the output directory: This is about how anvi’o will deal with output directories and files. 
