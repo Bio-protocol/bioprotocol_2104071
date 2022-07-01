@@ -44,7 +44,7 @@ Input Data:
 
 Source: https://figshare.com/s/35ea294e2671d75f1d5c
 
-Anvi’o use the program anvi-run-workflow to run the workflows. For a particular workflow, the program will the users to prepare the config file.
+Anvi’o use the program anvi-run-workflow to run the workflows. For a particular workflow, the program will help the users to prepare the config file.
 
 Command
 anvi-run-workflow --list-workflows
